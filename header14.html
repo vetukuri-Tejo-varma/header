@@ -1,0 +1,355 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Header14</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=DM+Sans:opsz,wght@9..40,300&display=swap" rel="stylesheet">
+</head>
+<style>
+    section {
+        background: #2F1893;
+    }
+
+    .main {
+        display: flex;
+        flex-direction: column;
+        justify-content: space-evenly;
+        padding: 10.3px;
+   }
+
+    .form {
+        display: flex;
+        justify-content: space-evenly;
+        padding: 23px;
+  }
+
+    /* Style for the navigation bar */
+    .navbar {
+
+        color: white;
+        display: flex;
+        justify-content: space-around;
+        align-items: center;
+        padding: 15px;
+    }
+
+    /* Logo style */
+    .logo {
+        color: #FFF;
+        text-align: center;
+        font-family: DM Sans;
+        font-size: 1.5rem;
+        font-style: normal;
+        font-weight: 700;
+    }
+
+    /* Navigation options style */
+    .nav-options {
+        display: flex;
+        list-style: none;
+        margin: 0;
+        padding: 0;
+    }
+
+    .nav-options li {
+        margin-right: 20px;
+        font-family: DM Sans;
+        font-size: 1.125rem;
+        font-style: normal;
+        font-weight: 500;
+
+    }
+
+    .nav-options li:first-child {
+        opacity: 0.3;
+    }
+
+    .nav-link {
+        text-decoration: none;
+        color: white;
+    }
+
+    /* Purchase button style */
+    .purchase-button {
+        border-radius: 6.25rem;
+        background: #E93A7D;
+        color: white;
+        border: none;
+        padding: 7px 27px;
+        cursor: pointer;
+    }
+
+    .info {
+        display: flex;
+        flex-direction: column;
+        gap: 15px;
+    }
+
+    .info p {
+        margin-block-start: 0px;
+    }
+
+    .info .heading {
+        color: #FFF;
+        font-family: DM Sans;
+        font-size: 3.625rem;
+        font-style: normal;
+        font-weight: 700;
+        white-space: pre-line;
+        margin: 0;
+        letter-spacing: 0.1875rem;
+    }
+
+    .info .description {
+        font-family: DM Sans;
+        font-size: 1.375rem;
+        font-style: normal;
+        font-weight: 500;
+        white-space: pre-line;
+        color: #FFF;
+    }
+
+    .signupform {
+        border-radius: 0.625rem;
+        background: #FFF;
+        display: flex;
+        flex-direction: column;
+        padding: 30px;
+        gap: 25px;
+    }
+
+    .more {
+        text-align: center;
+        font-family: DM Sans;
+        font-size: 1.125rem;
+        font-style: normal;
+        font-weight: 500;
+        width: 50%;
+        height: 69px;
+        color: white;
+
+        border-radius: 6.25rem;
+        background: var(--action-third, #E93A7D);
+    }
+
+    .signup {
+        color: #1E0E62;
+        text-align: center;
+        font-family: DM Sans;
+        font-size: 3.225rem;
+        font-style: normal;
+        font-weight: 700;
+        margin: 0;
+        letter-spacing: 2px;
+
+    }
+
+    .input-container {
+        display: flex;
+        flex-direction: column;
+        gap: 13px;
+    }
+
+    .input-container input {
+
+        height: 49px;
+        border: 2px solid #EBEAED;
+        border-radius: 100px;
+
+
+    }
+
+    input::placeholder {
+        color: rgba(21, 20, 57, 0.40);
+        font-family: DM Sans;
+        font-size: 0.925rem;
+        font-style: normal;
+        font-weight: 500;
+        padding: 9px;
+    }
+
+    /* Style the custom checkbox label */
+    .custom-checkbox-label {
+        display: inline-flex;
+        align-items: center;
+        cursor: pointer;
+    }
+
+    .hidden-checkbox {
+        display: none;
+    }
+
+    .custom-checkbox-label svg {
+        width: 20px;
+        height: 20px;
+        fill: #25DAC5;
+       
+        margin-right: 8px;
+        transition: fill 0.2s;
+    }
+
+    .hidden-checkbox:checked+.custom-checkbox-label svg {
+        fill: #1E0E62;
+    }
+
+    .check-box p {
+        color: rgba(21, 20, 57, 0.40);
+        font-family: DM Sans;
+        font-size: 1rem;
+        font-style: normal;
+        font-weight: 400;
+    }
+
+    .signin-btn {
+        border-radius: 6.25rem;
+        background: #482BE7;
+        color: white;
+        border: none;
+        padding: 0.845rem 11.725rem;
+        font-size: 1.125rem;
+
+        cursor: pointer;
+    }
+
+    .horizontal-line {
+        width: 45%;
+        border-top: 2px solid #EBEAED;
+    }
+
+    .line-container {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+    }
+
+    .or {
+        margin: 0 10px;
+        color: rgba(21, 20, 57, 0.40);
+        font-size: 1rem;
+    }
+
+    .twitter-btn {
+        border-radius: 6.25rem;
+        background: #1DA1F2;
+        color: white;
+        border: none;
+        padding: 0.845rem 9.625rem;
+        font-size: 1.125rem;
+
+        cursor: pointer;
+    }
+
+    .account {
+
+        /* Text / Article */
+        font-family: DM Sans;
+        font-size: 1.125rem;
+        font-style: normal;
+        font-weight: 500;
+
+    }
+
+    .account a {
+        color: #25DAC5;
+        text-decoration: none;
+    }
+
+    .account p {
+        color: rgba(21, 20, 57, 0.40);
+        margin-right: 10px;
+
+    }
+</style>
+
+<body>
+    <section>
+        <div class="main">
+            <!-- navbar -->
+            <div class="navbar">
+                <!-- Logo -->
+                <div class="logo">Startup 3</div>
+
+                <!-- Navigation options -->
+                <ul class="nav-options">
+                    <li><a class="nav-link" href="#">Overview</a></li>
+                    <li><a class="nav-link" href="#">Prices</a></li>
+                    <li><a class="nav-link" href="#">Blog</a></li>
+                    <li><a class="nav-link" href="#">Feedback</a></li>
+                    <li><a class="purchase-button nav-link" href="#">Purchase</a></li>
+
+
+                </ul>
+
+                <!-- Purchase button -->
+
+            </div>
+            <!-- form -->
+            <div class="form">
+                <div class="info">
+                    <!-- about -->
+                    <p class="heading">Generate
+                        Awesome Web
+                        Pages</p>
+                    <p class="description">
+                        The most important part of the
+                        Startup is the samples.The
+                        samples form a set of 25 usable
+                        pages you can use as is or you can
+                        add new blocks.
+                    </p>
+                    <!-- learn more button -->
+                    <button class="more">Learn More</button>
+                </div>
+                <div class="signupform">
+                    <!-- signup heading -->
+                    <div class="signup">
+                        <p class="signup">Sign Up Now</p>
+                    </div>
+                    <!-- inputs name, password -->
+                    <div class="input-container">
+                        <input type="text" placeholder="Your Name">
+                        <input type="password" placeholder="Your Password">
+                    </div>
+                    <div class="check-box">
+                        <input type="checkbox" id="check" class="hidden-checkbox">
+                        <label for="check" class="custom-checkbox-label">
+                            <span>
+                                <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24"
+                                    fill="none">
+                                    <rect width="24" height="24" rx="6" fill="#25DAC5" />
+                                    <path d="M7.2 12.6L10.3765 15.6L16.8 9.6" stroke="#1E0E62" stroke-width="2"
+                                        stroke-linecap="round" stroke-linejoin="round" />
+                                </svg>
+                            </span>
+                            <p>I agree to the terms and conditions</p>
+                        </label>
+                    </div>
+                    <!-- signin button -->
+                    <div class="signin">
+                        <button class="signin-btn">Sign In</button>
+                    </div>
+                    <div class="line-container">
+                        <hr class="horizontal-line">
+                        <span class="or">or</span>
+                        <hr class="horizontal-line">
+                    </div>
+                    <!-- twitter button-->
+                    <div class="twitter">
+                        <button class="twitter-btn">Login via Twitter</button>
+                    </div>
+                    <div class="account">
+                        <p class="account">Do you have an Account? <a href="#" class="">Sign In</a></p>
+                    </div>
+
+                </div>
+            </div>
+        </div>
+        </div>
+    </section>
+</body>
+
+</html>
